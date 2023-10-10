@@ -1,25 +1,17 @@
 <?php
+require_once 'cont_equipes.php';
 
-include_once 'cont_equipes.php';
 
 class ModEquipes {
-    private $controller;
-
     public function __construct() {
-        $this->controller = new ContEquipes();
-    }
+        // Créez une instance du contrôleur
+        $cont_joueurs = new ContEquipes();
 
-    public function handleRequest() {
-        $action = isset($_GET['action']) ? $_GET['action'] : 'bienvenue';
-
-        switch ($action) {
-            case 'bienvenue':
-                $this->controller->bienvenue();
-                break;
-            default:
-                echo "Action ERROR MDR";
-                break;
-        }
+        // Exécutez l'action en appelant la méthode du contrôleur
+        $cont_joueurs->exec();
     }
+ 
 }
+
 ?>
+
