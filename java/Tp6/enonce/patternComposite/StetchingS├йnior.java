@@ -1,8 +1,12 @@
 package clubSport.enonce.patternComposite;
 
-public class StetchingSénior extends Activite {
-    public StetchingSénior(int capacite) {
-        super("Stetching Sénior", capacite,new ConditionSénior());
+public class StretchingSenior extends Activite {
+    @Override
+    public void inscrire(Personne p) {
+        if (p.getAge() > 60) {
+            super.inscrire(p);
+        }
     }
-
 }
+
+

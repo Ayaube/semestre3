@@ -1,34 +1,29 @@
 package clubSport.enonce.patternSingleton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Club {
-    private static Club uniqueInstance = null;
-    private ArrayList<Activite> activites;
+    private static Club instance;
+    private List<Activite> activites;
 
-    public Club(ArrayList<Activite> activites) {
-        this.activites = activites;
+    private Club() {
+        activites = new ArrayList<>();
     }
 
-    public Club() {
-    }
 
-    public static Club getUniqueInstance() {
-        if(uniqueInstance==null){
-            uniqueInstance = new Club();
+    public static Club getInstance() {
+        if (instance == null) {
+            instance = new Club();
         }
-        return uniqueInstance;
+        return instance;
     }
 
-    public void ajouterActivites(Activite a){
-        activites.add(a);
+    public void ajouterActivite(Activite activite) {
+        activites.add(activite);
     }
 
-    public void retirerActivites(Activite a){
-        activites.remove(a);
-    }
-
-    public ArrayList<Activite> getActivites() {
-        return activites;
+    public void supprimerActivite(Activite activite) {
+        activites.remove(activite);
     }
 }
