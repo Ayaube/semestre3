@@ -1,5 +1,7 @@
 <?php
-class VueJoueurs {
+require_once 'vue_generique.php';
+
+class VueJoueurs extends VueGenerique {
 
 
 public function affiche_liste($tab) {

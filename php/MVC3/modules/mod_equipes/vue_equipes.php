@@ -1,5 +1,8 @@
 <?php
-class VueEquipes {
+
+require_once 'vue_generique.php';
+
+class VueEquipes extends VueGenerique {
      public function affiche_liste($elements) {
         echo '<li><a href="index.php?">Bienvenue</a></li>';
     echo '<ul>';

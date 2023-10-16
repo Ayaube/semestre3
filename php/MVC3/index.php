@@ -13,8 +13,16 @@
 
 	<body>
 <?php
+
 require_once 'modules/connexion.php';
 Connexion::initConnexion();
+
+require_once 'vue_generique.php';
+$vueGenerique = new VueGenerique();
+
+
+
+
 
 if (isset($_GET['module'])) {
     $module = $_GET['module'];
@@ -55,13 +63,15 @@ else {
 
 }
 
+echo $vueGenerique->getAffichage();
+
+
 
 ?>
 
 	</body>
     <footer>
-        Coordonnées de contact : hsilva@iut.univ-paris8.fr<br>
-        Mentions légales 
+        alamchichi@iut.univ-paris8.fr<br>
     </footer>
 </html>
 

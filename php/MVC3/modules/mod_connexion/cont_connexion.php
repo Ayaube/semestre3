@@ -42,7 +42,6 @@ class ContConnexion {
             $motDePasse = $_POST['password'];
             $utilisateur = $this->modele_connexion->verifierUser($login, $motDePasse);
             if ($utilisateur) {
-                session_start();
                 $_SESSION['utilisateur'] = $login;
                 // Redirigez vers la page d'accueil ou affichez un message de succès
             } else {

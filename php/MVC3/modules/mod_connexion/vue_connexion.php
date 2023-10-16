@@ -1,5 +1,8 @@
 <?php
-class VueConnexion {
+
+require_once 'vue_generique.php';
+
+class VueConnexion extends VueGenerique {
 
     public function form_inscription(){
         echo '<li><a href="index.php?">Bienvenue</a></li>';
