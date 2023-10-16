@@ -20,6 +20,12 @@ Connexion::initConnexion();
 require_once 'vue_generique.php';
 $vueGenerique = new VueGenerique();
 
+require_once 'composants/comp_menu/cont_menu.php';
+
+$compMenu = new ContMenu();
+$compMenu->affiche();
+
+
 
 
 
