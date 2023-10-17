@@ -1,3 +1,5 @@
+package clubSport.enonce.courrier;
+
 
 public class Lettre extends Courrier{
 

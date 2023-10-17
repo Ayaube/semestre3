@@ -1,3 +1,4 @@
+package clubSport.enonce.courrier;
 
 public class Colis extends Courrier{
 	public int poids;

@@ -1,3 +1,4 @@
+package clubSport.enonce.courrier;
 
 public abstract class Courrier {
 	private String destinataire;
