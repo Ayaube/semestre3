@@ -59,3 +59,11 @@ SET search_path TO lire;
 
         -- Session A
         SELECT COUNT(*) FROM livre;  -- On en a 17
+
+-- Question 10 --------------------------------------------------------------------------------------------------
+
+        UPDATE lecteur SET nom ='toto' WHERE num_lecteur=1 ;
+
+        COMMIT;
+
+        
