@@ -1,6 +1,7 @@
 
 SET search_path TO lire;
 
+-- Faire \set AUTOCOMMIT off
 
 -- Question 1 ------------------------------------------------------------------------------------------------
 
@@ -49,7 +50,7 @@ SET search_path TO lire;
 
 -- Question 7 --------------------------------------------------------------------------------------------------
 
-        -- On a donc vu que les transactions pouvaients travailler en deux temps, d'abord une phase d'action puis d'application de l'action
+        -- On a donc vu que les transactions pouvaients travailler en deux temps, d'abord une phase d'action puis d'application de l'action ( COMMIT / ROLLBACK etc...)
 
 -- Question 8 --------------------------------------------------------------------------------------------------
 
@@ -72,7 +73,7 @@ SET search_path TO lire;
 
                 -- Session A
                 SELECT nom FROM lecteur WHERE num_lecteur = 1;  -- Affiche de nouveau le nom du lecteur 1
-                -- On ne constate aucun changement car la session A est isolée (SERIALIZABLE)
+                -- On ne constate aucun changement car la session A est isolée par le SERIALIZABLE
 
 -- Question 11 --------------------------------------------------------------------------------------------------
 
@@ -120,7 +121,7 @@ SET search_path TO lire;
 
 -- Question 18 --------------------------------------------------------------------------------------------------
 
-                 -- Utiliser SERIALIZABLE dans des contextes où l'intégrité des données est cruciale et où il faut éviter toute interférence entre transactions
+                 -- Utiliser SERIALIZABLE est utile si on veut absolument préserver l'intégriter des données
 
 -- Question 19 --------------------------------------------------------------------------------------------------
 
