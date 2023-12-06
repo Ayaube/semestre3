@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/php",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Ayoub LAMCHICHI",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
