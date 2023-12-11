@@ -1,5 +1,6 @@
 <?php
 
+define('MY_APP_STARTED', true);
 session_start();
 require_once 'modules/connexion.php';
 Connexion::initConnexion();
@@ -10,6 +11,8 @@ $compMenu = new CompMenu();
 if (isset($_GET['module'])) {
     $module = $_GET['module'];
 
+    $module = isset($_GET['module']) ? $_GET['module'] : "default";
+    $module = strip_tags(htmlspecialchars($module));
 
 
     switch ($module) {
@@ -30,12 +33,12 @@ if (isset($_GET['module'])) {
             new ModConnexion();
             $moduleAffichage = (new VueConnexion())->getAffichage();
             echo $moduleAffichage;
-            break;   
+            break;
         default:
-        
+            die("Module inconnu ou non autorisé");
             break;
     }
-} 
+}
 
 require_once 'template.php';
 

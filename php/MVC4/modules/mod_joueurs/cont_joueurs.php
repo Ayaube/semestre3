@@ -1,4 +1,8 @@
 <?php
+
+if (!defined('MY_APP_STARTED')) {
+    die('Accès non autorisé');
+}
 require_once 'modele_joueurs.php';
 require_once 'vue_joueurs.php';
 

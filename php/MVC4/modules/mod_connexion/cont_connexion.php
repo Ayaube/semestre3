@@ -1,4 +1,9 @@
 <?php
+
+if (!defined('MY_APP_STARTED')) {
+    die('Accès non autorisé');
+}
+
 require_once 'modele_connexion.php';
 require_once 'vue_connexion.php';
 
